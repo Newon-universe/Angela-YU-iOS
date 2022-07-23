@@ -20,20 +20,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        storyLabel.text = example.getTitle()
-        choice1Button.setTitle(example.getChoices()[0], for: UIControl.State.normal)
-        choice2Button.setTitle(example.getChoices()[1], for: UIControl.State.normal)
+        updateUI()
     }
     
     @IBAction func choiceMade(_ sender: UIButton) {
-        example.nextChoice()
-        
+        example.nextStory(sender.currentTitle ?? "")
+        updateUI()
+    }
+    
+    func updateUI(){
         storyLabel.text = example.getTitle()
         choice1Button.setTitle(example.getChoices()[0], for: UIControl.State.normal)
         choice2Button.setTitle(example.getChoices()[1], for: UIControl.State.normal)
     }
-    
-
-
 }
 
