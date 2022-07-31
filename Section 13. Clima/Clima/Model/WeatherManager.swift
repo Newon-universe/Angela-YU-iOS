@@ -13,11 +13,6 @@ struct WeatherManager {
     
     var delegate: WeatherManagerDelegate?
     
-    func fetchWeather(cityName: String){
-        let urlString = "\(weatherURL)&q=\(cityName)"
-        perfomrRequest(with: urlString)
-    }
-    
     func perfomrRequest(with urlString: String) {
         // 1. create a URL
         if let url = URL(string: urlString) {
@@ -48,6 +43,7 @@ struct WeatherManager {
         }
     }
     
+    
     func parseJSON(_ wearherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         
@@ -66,4 +62,20 @@ struct WeatherManager {
             return nil
         }
     }
+}
+
+//MARK: - Fetch Collections
+
+extension WeatherManager {
+    
+    func fetchWeather(cityName: String){
+        let urlString = "\(weatherURL)&q=\(cityName)"
+        perfomrRequest(with: urlString)
+    }
+    
+    func fetchWeather(_ latitude: Double, _ longitude: Double) {
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
+        perfomrRequest(with: urlString)
+    }
+    
 }
