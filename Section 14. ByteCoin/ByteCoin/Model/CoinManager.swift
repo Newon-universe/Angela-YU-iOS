@@ -22,10 +22,6 @@ struct CoinManager {
     
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
 
-    func getCoinPrice(for currency: String) {
-        performRequest(with: "\(baseURL)/\(currency)?apikey=\(apiKey)")
-    }
-    
     func performRequest(with urlString: String) {
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
@@ -46,7 +42,20 @@ struct CoinManager {
             task.resume()
         }
     }
-    
+}
+
+//MARK: - method for getting data from UI
+
+extension CoinManager {
+    func getCoinPrice(for currency: String) {
+        performRequest(with: "\(baseURL)/\(currency)?apikey=\(apiKey)")
+    }
+}
+
+
+//MARK: - parsing
+
+extension CoinManager {
     func parseJSON(_ data: Data) -> CoinData? {
         let decoder = JSONDecoder()
         do {
