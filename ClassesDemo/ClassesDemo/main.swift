@@ -12,3 +12,4 @@ var skeleton2 = skeleton
 
 skeleton.takeDamage(amount: 10)
 print(skeleton2.health)
+

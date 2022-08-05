@@ -1,5 +1,9 @@
 struct Enemy {
-    var health:Int
+    var health:Int {
+        willSet {
+            print("His health is changed \(health) to \(newValue)")
+        }
+    }
     var attackStrength: Int
     
     init(health: Int, attackStrength : Int) {

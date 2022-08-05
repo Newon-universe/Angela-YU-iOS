@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-cocoaPods/Pods-cocoaPods-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/Google-Analytics-for-OS-X-and-iOS/GoogleAnalyticsTracker.framework

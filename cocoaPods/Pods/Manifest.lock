@@ -1,0 +1,34 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - Google-Analytics-for-OS-X-and-iOS (1.1.3)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Google-Analytics-for-OS-X-and-iOS
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Google-Analytics-for-OS-X-and-iOS
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  Google-Analytics-for-OS-X-and-iOS: 0636b57d5d11047f96bd3120875cb4f684476aa0
+
+PODFILE CHECKSUM: bbabc1d2b32a7695ab52928f0efc92a5a2718ec2
+
+COCOAPODS: 1.11.3
