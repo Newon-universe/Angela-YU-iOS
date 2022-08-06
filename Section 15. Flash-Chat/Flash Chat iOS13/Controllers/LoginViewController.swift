@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -15,6 +16,25 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginPressed(_ sender: UIButton) {
+        
+        let email = emailTextfield.text
+        let password = passwordTextfield.text
+        
+        guard let email = email, let password = password else {
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let e = error {
+                print(e)
+                let sheet = UIAlertController(title: "", message: e.localizedDescription, preferredStyle: .actionSheet)
+                sheet.addAction(UIAlertAction(title: "확인", style: .default, handler: { _ in  }))
+                self.present(sheet, animated: true)
+            } else {
+                self.performSegue(withIdentifier: K.loginSegue, sender: self)
+            }
+            
+        }
     }
     
 }
