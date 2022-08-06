@@ -7,7 +7,7 @@
 	<key>REVERSED_CLIENT_ID</key>
 	<string>com.googleusercontent.apps.354208268501-druf995kukhcctlm0umnjsa736gpsdm4</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCUU32gb3gwjzdC0zU9obtOMq1LdwLnahM</string>
+	<string></string>
 	<key>GCM_SENDER_ID</key>
 	<string>354208268501</string>
 	<key>PLIST_VERSION</key>
@@ -19,15 +19,15 @@
 	<key>STORAGE_BUCKET</key>
 	<string>flash-chat-3d1ba.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:354208268501:ios:646549d6fed0276ad8225c</string>
 </dict>

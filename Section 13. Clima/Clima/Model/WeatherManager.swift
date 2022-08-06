@@ -9,7 +9,7 @@ struct WeatherManager {
     // if you try to load data from "http", you got error of "App Transport Security policy requires the use of a secure connection."
     // than you should use https
     
-    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=ea19a6872a1856598051300b953de50e&units=metric"
+    let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=&units=metric"
     
     var delegate: WeatherManagerDelegate?
     
