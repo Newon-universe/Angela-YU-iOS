@@ -50,7 +50,6 @@ class ChatViewController: UIViewController {
                     let newMessages = Message(sender: messageSender, body: messageBody)
                     self.messages.append(newMessages)
                     
-                    
                     // closure process is on background, so make reload and showing data in main thread
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -124,5 +123,4 @@ extension ChatViewController: UITableViewDataSource {
         cell.label.text = message.body
         return cell
     }
-    
 }
