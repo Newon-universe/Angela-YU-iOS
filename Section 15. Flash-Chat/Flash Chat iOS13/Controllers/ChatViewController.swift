@@ -33,7 +33,6 @@ class ChatViewController: UIViewController {
     
     func loadMessages() {
         
-        
         db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener { querySnapshot, error in
             if let e = error {
                 print("There was an issue retrieving data from Firestore. \(e)")
