@@ -14,7 +14,6 @@ class TodoListViewController: UITableViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var itemArray = [Item]()
     @IBOutlet var searchBar: UISearchBar!
-    let searchController = UISearchController(searchResultsController: nil)
     // when UserDefaults is called, it call all of line from UserDefaults plist and synchronize
     // so make sure that it is not for db, but for short info
     
@@ -23,10 +22,6 @@ class TodoListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        NSDirectionalEdgeInsets(top: 25, leading: 0, bottom: 0, trailing: 0)
-        searchController.searchBar.backgroundColor = .white
-        navigationItem.searchController = searchController
         
         searchBar?.delegate = self
         loadItems()
@@ -130,7 +125,6 @@ class TodoListViewController: UITableViewController {
         }
     }
     
-
 }
 
 //MARK: - UISearchBar Delegate
@@ -150,5 +144,6 @@ extension TodoListViewController: UISearchBarDelegate {
         } catch {
             print("Error fetching data from context \(error)")
         }
+        
     }
 }
