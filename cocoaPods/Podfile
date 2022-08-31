@@ -1,9 +1,0 @@
-platform :ios, '15.5'
-
-target 'cocoaPods' do
-  use_frameworks!
-
-  # Pods for cocoaPods
-  pod "AFNetworking"
-  pod "Google-Analytics-for-OS-X-and-iOS"
-end
